@@ -20,22 +20,24 @@ order += "load"
 order += "memory"
 order += "tztime local"
 
+# https://fontawesome.com/v5/cheatsheet/free/solid (icons)
+
 wireless _first_ {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+        format_up = "  W: (%quality at %essid) %ip"
+        format_down = "  W: down"
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+        format_up = " E: %ip (%speed)"
+        format_down = " E: down"
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+        format = " %status %percentage %remaining"
 }
 
 disk "/" {
-        format = "%avail"
+        format = " %avail"
 }
 
 load {
@@ -43,11 +45,11 @@ load {
 }
 
 memory {
-        format = "%used | %available"
+        format = " %used | %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-        format = "%a, %d.%m.%Y %H:%M"
+        format = " %a, %d.%m.%Y %H:%M"
 }
