@@ -190,3 +190,6 @@ exec_always localectl set-x11-keymap --no-convert de pc105 neo
 
 # set tux as background image
 exec_always feh --bg-fill /home/noerd/Pictures/tux.jpg
+
+# keybinding for i3lock
+bindsym $mod+odiaeresis exec i3lock
