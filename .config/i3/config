@@ -199,3 +199,30 @@ exec_always feh --bg-fill ~/Pictures/tux.jpg
 
 # keybinding for i3lock
 bindsym $mod+odiaeresis exec i3lock
+
+# change brightness
+bindsym XF86MonBrightnessUp exec "brightnessctl s 10%+"
+bindsym XF86MonBrightnessDown exec "brightnessctl s 10-%"
+
+# a comfortable way to change screen brightness
+bindsym $mod+z mode brightness
+mode "brightness" {
+	bindsym 1 exec "brightnessctl s 10%"
+	bindsym 2 exec "brightnessctl s 20%"
+	bindsym 3 exec "brightnessctl s 30%"
+	bindsym 4 exec "brightnessctl s 40%"
+	bindsym 5 exec "brightnessctl s 50%"
+	bindsym 6 exec "brightnessctl s 60%"
+	bindsym 7 exec "brightnessctl s 70%"
+	bindsym 8 exec "brightnessctl s 80%"
+	bindsym 9 exec "brightnessctl s 90%"
+	bindsym 0 exec "brightnessctl s 100%"
+
+	bindsym Shift+1 exec "brightnessctl s 1%"
+	bindsym Shift+2 exec "brightnessctl s 2%"
+	bindsym Shift+5 exec "brightnessctl s 5%"
+	bindsym Shift+0 exec "brightnessctl s 0%"
+
+	bindsym Escape mode "default"
+}
+
