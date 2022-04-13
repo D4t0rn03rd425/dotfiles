@@ -226,3 +226,21 @@ mode "brightness" {
 	bindsym Escape mode "default"
 }
 
+# Additional bindings for playerctl and XF86 media buttons
+bindsym XF86AudioPlay exec "playerctl play-pause"
+bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioPrev exec "playerctl previous"
+
+# universal keybindings to control music playback
+bindsym $mod+q mode playerctl
+mode "playerctl" {
+	bindsym n exec "playerctl next"
+	bindsym r exec "playerctl previous"
+	bindsym q exec "playerctl play-pause"
+	bindsym space exec "playerctl play-pause"
+	bindsym h exec $lower-volume
+	bindsym g exec $raise-volume
+
+	bindsym Escape mode "default"
+}
+
